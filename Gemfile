@@ -44,6 +44,7 @@ group :production do
 end
 
 gem "devise", "~> 3.2.2"
+gem "paperclip", "~> 3.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
