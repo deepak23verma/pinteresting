@@ -1,7 +1,7 @@
 Pinteresting::Application.routes.draw do
   resources :pins
 
-  devise_for :users
+  devise_for :users, controllers: {omniauth_callbacks: 'omniauth_callbacks'}
   root "pins#index"
   get "about" => "pages#about" # creates about_path
   # The priority is based upon order of creation: first created -> highest priority.
