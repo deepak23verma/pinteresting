@@ -19,15 +19,17 @@
         <%= f.email_field :email, class: "form-control", placeholder: "Enter email" %>
       </div>
 
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
-      </div>
+      <% if f.object.password_required? %>
+        <div class="form-group">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: "form-control", placeholder: "Enter password" %>
+        </div>
 
-      <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Re-enter your password" %>
-      </div>
+        <div class="form-group">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Re-enter your password" %>
+        </div>
+      <% end %>
 
       <div class="form-group">
         <%= f.submit "Sign up", class: "btn btn-primary" %>
