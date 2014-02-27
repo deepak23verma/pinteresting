@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Pinteresting::Application.config.secret_key_base = '02dce582390305af0b3f14bc097731e789b9a1d8a1834d28d525dce7bfb091ebfcc19c083fb180f417b2b3c39473f84ceb4e4600ad35249c87e6a5b9249c58f6'
+Pinteresting::Application.config.secret_key_base = ENV["SECRET_KEY_BASE"]
