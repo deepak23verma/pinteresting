@@ -45,6 +45,8 @@ group :production do
 end
 
 gem "devise", "~> 3.2.2"
+gem "omniauth", "~> 1.2.1"
+gem "omniauth-twitter", "~> 1.0.1"
 gem "paperclip", "~> 3.0"
 gem 'aws-sdk', '~> 1.20.0'
 gem 'masonry-rails', '~> 0.2.0'
