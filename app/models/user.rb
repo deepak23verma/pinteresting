@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
     where(auth.slice(:provider, :uid)).first_or_create do |user|
       user.provider = auth.provider
       user.uid = auth.uid
+      user.name = auth.info.name
     end
   end
 
@@ -27,6 +28,10 @@ class User < ActiveRecord::Base
 
   def password_required?
     super && provider.blank?
+  end
+
+  def name_required?
+    provider.blank?
   end
 
   def update_with_password(params, *options)
